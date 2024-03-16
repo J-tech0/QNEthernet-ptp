@@ -5,7 +5,8 @@ or
 
 ### Teensy 4.x modified as I require, specifically:
   - diffserv for QoS data
-    -added setPacketDiffServ() to QNEthernetUDP.cpp/.h
+    - added setPacketDiffServ() to QNEthernetUDP.cpp/.h
+    - modified udp.beginPacket() to initialise TOS/DiffServ header so it gets reset to 0 if not set via the function above
   - merging back in ieee-1588 (Precision Time Protocol)
 
 
