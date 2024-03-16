@@ -1,5 +1,5 @@
 {
-  "name": "QNEthernet",
+  "name": "QNEthernet-ptp",
   "description": "An lwIP-based Ethernet library for Teensy 4.1 and other platforms. This follows the Arduino-defined Ethernet API but is more full-featured. Additional features include: a more robust and complete API, an mDNS resolver, raw frame support, and many others.",
   "keywords": "ethernet, lwip",
   "authors": [
@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ssilverman/QNEthernet"
+    "url": "https://github.com/J_tech0/QNEthernet-ptp"
   },
   "version": "0.27.0",
   "license": "AGPL-3.0-or-later",
