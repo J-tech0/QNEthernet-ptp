@@ -353,7 +353,7 @@ bool EthernetUDP::beginPacket(const ip_addr_t *ipaddr, uint16_t port) {
   // if (outPacket_.data.capacity() < kMaxPayloadSize) {
   //   outPacket_.data.reserve(kMaxPayloadSize);
   // }
-
+  pcb_->tos = 0; //re-zero TOS/diffserv
   outPacket_.addr = *ipaddr;
   outPacket_.port = port;
   hasOutPacket_ = true;
