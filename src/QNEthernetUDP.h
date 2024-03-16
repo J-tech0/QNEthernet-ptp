@@ -85,6 +85,10 @@ class EthernetUDP : public UDP {
   int beginPacket(const char *host, uint16_t port) final;
   int endPacket() final;  // Always clears accumulated data
 
+  //DiffServ on outgoing packets
+
+  int setPacketDiffServ(int dscp);
+
   // Sends a UDP packet and returns whether the attempt was successful. This
   // combines the functions of beginPacket(), write(), and endPacket(), and
   // causes less overhead.

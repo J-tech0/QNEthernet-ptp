@@ -398,6 +398,15 @@ int EthernetUDP::endPacket() {
   return (err == ERR_OK);
 }
 
+int EthernetUDP::setPacketDiffServ(int dscp) {
+  if (!hasOutPacket_) {
+    return false;
+  }
+  hasOutPacket_=false;
+  pcb_->tos = dscp << 2;
+  return 0;
+}
+
 bool EthernetUDP::send(const IPAddress &ip, uint16_t port,
                        const uint8_t *data, size_t len) {
   ip_addr_t ipaddr IPADDR4_INIT(get_uint32(ip));
