@@ -402,7 +402,6 @@ int EthernetUDP::setPacketDiffServ(int dscp) {
   if (!hasOutPacket_) {
     return false;
   }
-  hasOutPacket_=false;
   pcb_->tos = dscp << 2;
   return 0;
 }
